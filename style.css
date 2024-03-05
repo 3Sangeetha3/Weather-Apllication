@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    background-image: url('background-images/bg.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    background-image: url('weather-animations/default.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+#heading {
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    transform: translate(4%);
+    margin-bottom: 20px;
+}
+
+#city-name {
+    width: 280px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid blueviolet;
+    margin-bottom: 10px;
+    margin-right: 6px;
+}
+
+.ok-button {
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: blueviolet;
+    border: 1px white solid;
+    color: white;
+    cursor: pointer;
+}
+
+
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-data p {
+    margin: 5px 0;
+}
+
+.weather-temperature {
+    margin-top: 10px;
+    font-size: 46px;
+    font-weight: 500;
+}
+
+.main {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 400;
+}
+.humidity, .pressure {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+p {
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    justify-content: center;
+    color: Black;
+}
+
+@media screen and (max-width: 480px) and (max-height: 800px) and (orientation: portrait) {
+    .card {
+        width: 90%;
+        height: 90%;
+    }
+
+    #heading {
+        padding: 6px;
+        font-size: 32px;
+        margin-top: 30px;
+    }
+
+    #city-name {
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .ok-button {
+        width: 40%;
+        font-size: 15px;
+        margin-left: 70px;
+    }
+}
