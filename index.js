@@ -10,6 +10,13 @@ const fetchWeatherData = () => {
         event.preventDefault()
         
         city_name = document.getElementById('city-name').value
+        if(!city_name){
+            fetch(`https://ip.ba3a.tech/`)
+            .then(response => {
+                response = responso.json();
+                city_name = response.city
+            })
+        }
         
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${app_id}&units=metric`)
             .then(response => response.json())
